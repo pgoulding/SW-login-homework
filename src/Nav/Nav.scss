@@ -1,0 +1,29 @@
+nav {
+  background-color: #282828;
+  padding: 12px 20px;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  button {
+    border-radius: 6px;
+    border-color:#98012e;
+    font-size: 12px;
+    min-height: 25px;
+    padding: 5px;
+    transition: border .2s, background .2s;
+    &.nav_button-login {
+      background-color: #98012e;
+      &:hover {
+        border-color:#f7931d;
+        background-color:#f7931d;
+      }
+    }
+    &.nav_button-logout {
+      background-color: #282828;
+        &:hover {
+          border-color:#f7931d;
+        }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './Signin.scss'
 export class Signin extends Component {
   constructor() {
     super()
@@ -21,28 +21,38 @@ export class Signin extends Component {
 
   render() {
     return (
-      <form className="signin_form-main">
-        <input
-          onChange={this.handleChange}
-          value={this.state.username}
-          name="username"
-          className="signin_input-username"
-        />
-        <input 
-          onChange={this.handleChange}
-          value={this.state.password}
-          name="password"
-          className="signin_input-password"
-        />
-        <button
-          onClick={this.submitUserLogin}
-          className="signin_button-submit"
-        >
-          Login
-        </button>
-        
-      </form>
-    )
+      <div className="signin_component-main">
+        <form className="signin_form-main">
+          <label>
+            UserName:
+          <input
+            onChange={this.handleChange}
+            value={this.state.username}
+            placeholder="User Name"
+            name="username"
+            className="signin_input-username"
+          />
+          </label>
+          <label>
+            Password:
+          <input
+            onChange={this.handleChange}
+            value={this.state.password}
+            placeholder="password"
+            type="password"
+            name="password"
+            className="signin_input-password"
+          />
+          </label>
+          <button
+            onClick={this.submitUserLogin}
+            className="signin_button-submit"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    );
   }
 }
 

@@ -10,14 +10,14 @@ export const Nav = (props) => {
        &&
       <button
         className="nav_button-logout"
-      >Logout 
+      >LOGOUT
       </button>
       }
       {!props.isLoggedIn
       &&
       <button 
         className="nav_button-login"
-      >Login
+      >LOGIN
       </button>
       }
     </nav>

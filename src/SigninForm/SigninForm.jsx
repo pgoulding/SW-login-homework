@@ -13,6 +13,8 @@ export const SigninForm = props => {
     if(props.values.username && props.values.password) {
       props.nextStep();
     } else {
+      // Here I would add some form validation to prompt 
+      // the user to continue filling out their signin
       console.log('Missing values')
     }
   };

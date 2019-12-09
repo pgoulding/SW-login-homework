@@ -1,16 +1,21 @@
 nav {
   background-color: #282828;
-  padding: 12px 20px;
-  width:100%;
+  padding: 0 20px;
+  height: 10%;
   display:flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  img{
+    width: 180px;
+  }
   button {
     border-radius: 6px;
     border-color:#98012e;
     font-size: 12px;
-    min-height: 25px;
+    color: #fff;
     padding: 5px;
+    width:65px;
     transition: border .2s, background .2s;
     &.nav_button-login {
       background-color: #98012e;

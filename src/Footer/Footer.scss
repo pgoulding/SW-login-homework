@@ -2,14 +2,14 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
+  background-color: #282828;
+  height: 100px;
   ul {
     display: flex;
     list-style: none;
     color: #fff;
-    padding: 0;
+    padding: 0 10px;
     justify-content: space-around;
   } 
-  background-color: #282828;
-  height: 10%;
 }

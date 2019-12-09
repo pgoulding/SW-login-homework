@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SigninForm from "../SigninForm/SigninForm";
 import UserProfile from "../UserProfile/UserProfile";
+import ConfirmDetails from "../ConfirmDetails/ConfirmDetails";
 
 export class UserForm extends Component {
   constructor() {
@@ -37,6 +38,7 @@ export class UserForm extends Component {
     const {
       step,
       username,
+      password,
       firstName,
       lastName,
       street,
@@ -49,6 +51,7 @@ export class UserForm extends Component {
       firstName,
       lastName,
       username,
+      password,
       street,
       addressState,
       zipCode,
@@ -81,10 +84,15 @@ export class UserForm extends Component {
       
         case 3: 
           return (
-            <div>
-              <h1>ConfirmDetails</h1>
+            <div className="signin_form-main">
+              <ConfirmDetails
+                nextStep={this.nextStep}
+                previousStep={this.prevStep}
+                handleChange={this.handleChange}
+                values={values}
+              />
             </div>
-          )
+          );
         
       default:
         break;

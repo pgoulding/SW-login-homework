@@ -11,13 +11,12 @@ constructor() {
   super()
   this.state = {
     isLoggedIn:false,
-    userName:''
   }
 }
 
 toggleLogin=(bool) => {
   this.setState({isLoggedIn:bool})
-} 
+}
 
   render() {
     const { isLoggedIn } = this.state
@@ -27,14 +26,16 @@ toggleLogin=(bool) => {
           toggleLogin={this.toggleLogin}
           isLoggedIn={isLoggedIn}
         />
-        {
-          !isLoggedIn &&
-          <UserForm />
-        }
-        {
-          isLoggedIn && 
-          <UserProfile />
-        }
+        <article className="main_signin-body">
+          {
+            !isLoggedIn &&
+            <UserForm />
+          }
+          {
+            isLoggedIn && 
+            <h1>You're logged in!</h1>
+          }
+        </article>
         <Footer />
       </main>
     )

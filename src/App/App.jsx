@@ -22,23 +22,18 @@ toggleLogin=(bool) => {
     const { isLoggedIn } = this.state
     return (
       <main>
-        <Nav 
-          toggleLogin={this.toggleLogin}
-          isLoggedIn={isLoggedIn}
-        />
+        <Nav toggleLogin={this.toggleLogin} isLoggedIn={isLoggedIn} />
         <article className="main_signin-body">
-          {
-            !isLoggedIn &&
-            <UserForm />
-          }
-          {
-            isLoggedIn && 
-            <h1>You're logged in!</h1>
-          }
+          {!isLoggedIn && (
+            <UserForm 
+              toggleLogin={this.toggleLogin} 
+            />
+          )}
+          {isLoggedIn && <h1>You're logged in!</h1>}
         </article>
         <Footer />
       </main>
-    )
+    );
   }
 }
 

@@ -4,8 +4,8 @@ import UserProfile from "../UserProfile/UserProfile";
 import ConfirmDetails from "../ConfirmDetails/ConfirmDetails";
 
 export class UserForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       step: 1,
       username: "",
@@ -86,7 +86,7 @@ export class UserForm extends Component {
           return (
             <div className="signin_form-main">
               <ConfirmDetails
-                nextStep={this.nextStep}
+                toggleLogin={this.props.toggleLogin}
                 previousStep={this.prevStep}
                 handleChange={this.handleChange}
                 values={values}

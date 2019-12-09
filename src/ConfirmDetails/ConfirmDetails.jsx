@@ -5,9 +5,9 @@ import { useStyles } from "../muiTheme";
 export const ConfirmDetails = (props) => {
   const classes = useStyles();
 
-  const continueForm = e => {
+  const submitUser = e => {
     e.preventDefault();
-    props.nextStep();
+    props.toggleLogin(true);
   };
 
   const previousForm = e => {
@@ -90,7 +90,7 @@ export const ConfirmDetails = (props) => {
       <Button
         fullWidth="true"
         className={classes.button}
-        onClick={continueForm}
+        onClick={submitUser}
       >
         Confirm Details
       </Button>

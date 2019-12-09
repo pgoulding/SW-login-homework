@@ -18,7 +18,7 @@ export const Nav = (props) => {
       &&
       <button 
         className="nav_button-login"
-        onClick={() => props.toggleLogin(true)}
+        // onClick={() => props.toggleLogin(true)}
       >LOGIN
       </button>
       }

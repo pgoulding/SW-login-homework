@@ -2,7 +2,6 @@ import React from "react";
 import "./SigninForm.scss";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import FormControl from "@material-ui/core/FormControl";
 import { useStyles } from '../muiTheme'
 
 export const SigninForm = props => {
@@ -21,7 +20,6 @@ export const SigninForm = props => {
 
   return (
     <div>
-      <FormControl>
       <TextField
         onChange={props.handleChange}
         fullWidth="true"
@@ -30,8 +28,6 @@ export const SigninForm = props => {
         type="text"
         required
       />
-      </FormControl>
-      <FormControl>
       <TextField
         onChange={props.handleChange}
         fullWidth="true"
@@ -41,7 +37,6 @@ export const SigninForm = props => {
         autoComplete="current-password"
         required
       />
-      </FormControl>
       <Button
         fullWidth="true"
         className={classes.button}

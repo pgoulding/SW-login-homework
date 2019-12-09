@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import "./App.scss"
 import { Nav } from '../Nav/Nav'
-import { Signin } from '../Signin/Signin'
 import { UserProfile } from '../UserProfile/UserProfile'
 import { Footer } from '../Footer/Footer'
+import SigninForm from '../SigninForm/SigninForm'
+import UserForm from '../UserForm/UserForm'
 
 export class App extends Component {
 constructor() {
@@ -15,23 +16,23 @@ constructor() {
 }
 
 toggleLogin=(bool) => {
-  console.log(bool)
   this.setState({isLoggedIn:bool})
 } 
 
   render() {
+    const { isLoggedIn } = this.state
     return (
       <main>
         <Nav 
           toggleLogin={this.toggleLogin}
-          isLoggedIn={this.state.isLoggedIn}
+          isLoggedIn={isLoggedIn}
         />
         {
-          !this.state.isLoggedIn &&
-          <Signin />
+          !isLoggedIn &&
+          <UserForm />
         }
         {
-          this.state.isLoggedIn && 
+          isLoggedIn && 
           <UserProfile />
         }
         <Footer />
